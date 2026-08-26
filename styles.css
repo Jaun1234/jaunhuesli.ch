@@ -23,3 +23,14 @@
 .visual-sage:after {
   content: none;
 }
+
+/* Mehr Luft zwischen einer Bildergruppe und der nächsten Überschrift */
+#bilder .gallery + h3 {
+  margin-top: 56px;
+}
+
+@media (max-width: 700px) {
+  #bilder .gallery + h3 {
+    margin-top: 38px;
+  }
+}
