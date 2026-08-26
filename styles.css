@@ -11,3 +11,15 @@
 .visual-wood:after {
   content: none;
 }
+
+/* Studio EG: echtes Foto statt grafischer Fläche */
+.visual-sage {
+  background-image: linear-gradient(0deg, rgba(20,30,25,.35), rgba(20,30,25,.05)), url('studio-b/bild-b-01.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.visual-sage:before,
+.visual-sage:after {
+  content: none;
+}
