@@ -23,3 +23,13 @@
   height: 220px !important;
   object-fit: cover !important;
 }
+
+/* Startbild: Landschaft statt grünem Hintergrund */
+.hero {
+  background-image: linear-gradient(90deg, rgba(18, 40, 32, .62) 0%, rgba(18, 40, 32, .34) 55%, rgba(18, 40, 32, .18) 100%), url('hero-jaunhuesli.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.hero-pattern { display: none; }
+.hero:after { background: linear-gradient(90deg, rgba(20,45,36,.18), rgba(20,45,36,0)); }
