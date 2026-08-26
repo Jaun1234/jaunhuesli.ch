@@ -11,3 +11,15 @@
   object-fit: cover;
   border-radius: 10px;
 }
+.gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+.gallery img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+}
