@@ -2,7 +2,18 @@
   const availability = {
     wohnung: {
       ready: false,
-      occupied: []
+      occupied: [
+        '2026-12-20',
+        '2026-12-21',
+        '2026-12-22',
+        '2026-12-23',
+        '2026-12-24',
+        '2026-12-25',
+        '2026-12-26',
+        '2026-12-27',
+        '2026-12-28',
+        '2026-12-29'
+      ]
     },
     studio: {
       ready: false,
@@ -66,12 +77,12 @@
       if (date < today) {
         cell.classList.add('past');
         cell.setAttribute('aria-label', `${day}. ${monthNames[month]} ${year}, vergangen`);
-      } else if (!unit.ready) {
-        cell.classList.add('unknown');
-        cell.setAttribute('aria-label', `${day}. ${monthNames[month]} ${year}, Belegung noch nicht eingetragen`);
       } else if (unit.occupied.includes(key)) {
         cell.classList.add('occupied');
         cell.setAttribute('aria-label', `${day}. ${monthNames[month]} ${year}, belegt`);
+      } else if (!unit.ready) {
+        cell.classList.add('unknown');
+        cell.setAttribute('aria-label', `${day}. ${monthNames[month]} ${year}, Belegung noch nicht eingetragen`);
       } else {
         cell.classList.add('available');
         cell.setAttribute('aria-label', `${day}. ${monthNames[month]} ${year}, frei`);
@@ -84,7 +95,7 @@
     if (note) {
       note.textContent = unit.ready
         ? 'Grün = frei · Rot = belegt.'
-        : 'Die aktuellen Belegungsdaten werden noch eingetragen.';
+        : 'Rot = bereits belegt · weitere Belegungsdaten werden noch eingetragen.';
     }
   }
 
