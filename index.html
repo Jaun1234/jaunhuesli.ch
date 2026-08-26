@@ -19,6 +19,7 @@
     <nav aria-label="Hauptnavigation">
       <a href="#unterkuenfte">Unterkünfte</a>
       <a href="#preise">Preise</a>
+      <a href="#belegung">Belegung</a>
       <a href="#gut-zu-wissen">Gut zu wissen</a>
       <a href="#kontakt" class="nav-cta">Direkt anfragen</a>
     </nav>
@@ -140,6 +141,40 @@
       </div>
     </section>
 
+    <section id="belegung" class="section availability-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Verfügbarkeit</p>
+        <h2>Belegungskalender</h2>
+        <p>Hier seht ihr die Belegung der Wohnung OG und des Studios EG.</p>
+      </div>
+
+      <div class="calendar-toolbar" aria-label="Kalendermonat wechseln">
+        <button id="calendar-prev" type="button" aria-label="Vorheriger Monat">‹</button>
+        <strong id="calendar-month" aria-live="polite"></strong>
+        <button id="calendar-next" type="button" aria-label="Nächster Monat">›</button>
+      </div>
+
+      <div class="calendar-grid-wrap">
+        <article class="calendar-card">
+          <h3>Wohnung OG</h3>
+          <div id="calendar-wohnung" class="calendar-grid" aria-label="Belegungskalender Wohnung OG"></div>
+          <p class="calendar-note" data-calendar-note="wohnung"></p>
+        </article>
+        <article class="calendar-card">
+          <h3>Studio EG</h3>
+          <div id="calendar-studio" class="calendar-grid" aria-label="Belegungskalender Studio EG"></div>
+          <p class="calendar-note" data-calendar-note="studio"></p>
+        </article>
+      </div>
+
+      <div class="calendar-legend" aria-label="Legende">
+        <span><i class="legend-free"></i> Frei</span>
+        <span><i class="legend-busy"></i> Belegt</span>
+        <span><i class="legend-open"></i> Noch nicht eingetragen</span>
+      </div>
+      <p class="availability-hint">Die Belegungsdaten sind im Moment noch nicht hinterlegt. Sobald die bereits reservierten Daten eingetragen sind, zeigt der Kalender freie und belegte Tage an.</p>
+    </section>
+
     <section id="gut-zu-wissen" class="section info-section">
       <div class="section-heading">
         <p class="eyebrow">Vor der Reise</p>
@@ -216,5 +251,6 @@
     <p>Direktvermietung bei Daniela und Tobias · Im Fang, Schweiz</p>
     <a href="#top">Nach oben ↑</a>
   </footer>
+  <script src="belegung.js"></script>
 </body>
 </html>
